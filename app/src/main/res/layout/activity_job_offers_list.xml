@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobOffersListActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/recruitment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="#c1eaeaea"
+        android:text="@string/jobOffersInfo"
+        android:textColor="#ffffff"
+        android:textSize="26dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="#c1eaeaea" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="42dp"
+        android:onClick="goJobOffer"
+        android:text="@string/view" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:onClick="goJobOffer"
+        android:text="@string/create" />
+</RelativeLayout>

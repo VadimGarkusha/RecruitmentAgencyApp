@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Vadym_Victor_Assignment4</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="loginJobSeeker">Login as Job Seeker</string>
+    <string name="loginAdmin">Login as Admin</string>
+    <string name="registerJobSeeker">Register as Job Seeker</string>
+    <string name="recruimentAgency">Recruitment Agency</string>
+    <string name="userName">Username</string>
+    <string name="firstName">First name</string>
+    <string name="lastName">Last Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="postal">Postal code</string>
+    <string name="qualification">Qualification</string>
+    <string name="experience">Experience</string>
+    <string name="password">Password</string>
+    <string name="persInfo">Personal Info</string>
+    <string name="payInfo">Payment Info</string>
+    <string name="creditCard">Credit card number</string>
+    <string name="expiration">Expiration date MMYY</string>
+    <string name="paymentDate">Payment Date</string>
+    <string name="amountPaid">Amount Paid</string>
+    <string name="viewPersonalInfo">View/Edit Personal Information</string>
+    <string name="viewJobOffer">View Job Offer Information</string>
+    <string name="yourJobOffers">Your Job Offers:</string>
+    <string name="interviewDate">Interview Date</string>
+    <string name="interviewStatus">Interview Status</string>
+    <string name="companyName">Company Name</string>
+    <string name="positionName">Position Name</string>
+    <string name="recrutStatus">Recruitment Status</string>
+    <string name="update">Update</string>
+    <string name="candidatesInfo">Candidates Information</string>
+    <string name="jobOffersInfo">Job Offers Information</string>
+    <string name="view">View</string>
+    <string name="create">Create</string>
+</resources>

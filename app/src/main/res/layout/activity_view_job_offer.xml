@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewJobOfferActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/recruitment" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="358dp"
+        android:layout_height="432dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:background="#c1c2c2c2">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="388dp"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/interviewDate"
+                    android:inputType="date" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/interviewStatus"
+                    android:textSize="20dp"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+            <TableRow>
+                <Spinner
+                    android:id="@+id/spinInterviewStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/companyName"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etPostal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/positionName"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/recrutStatus"
+                    android:textSize="20dp"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+            <TableRow>
+                <Spinner
+                    android:id="@+id/spinRecrutStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/loginJobSeeker"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text="@string/create" />
+
+
+</RelativeLayout>

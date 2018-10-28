@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/recruitment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:text="@string/recruimentAgency"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/login"
+        android:background="#c1eaeaea"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:background="#c1eaeaea"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <Button
+        android:id="@+id/loginJobSeeker"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginTop="-1dp"
+        android:onClick="goJobSeekerMenu"
+        android:text="@string/loginJobSeeker" />
+
+    <Button
+        android:id="@+id/loginAdmin"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginJobSeeker"
+        android:layout_alignStart="@+id/loginJobSeeker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="131dp"
+        android:onClick="goAdminMenu"
+        android:text="@string/loginAdmin" />
+
+    <Button
+        android:id="@+id/btnRegisterJobSeeker"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:onClick="goRegisterJobSeeker"
+        android:padding="5px"
+        android:text="@string/registerJobSeeker" />
+
+
+
+</RelativeLayout>

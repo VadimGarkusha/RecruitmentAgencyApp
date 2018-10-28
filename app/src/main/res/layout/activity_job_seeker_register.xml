@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobSeekerRegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/recruitment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/registerJobSeeker"
+        android:textColor="#ffffff"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#c1c2c2c2"/>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="359dp"
+        android:layout_height="377dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="77dp"
+        android:background="#c1c2c2c2">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/persInfo"
+                    android:textColor="#ffffff"
+                    android:textSize="26dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/userName"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/firstName"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/lastName"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/address"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/city"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow android:layout_height="43dp">
+
+                <EditText
+                    android:id="@+id/etPostal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/postal"
+                    android:inputType="textPostalAddress" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etQualification"
+                    android:layout_width="38dp"
+                    android:layout_height="150dp"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/qualification"
+                    android:inputType="text|textMultiLine" />
+
+                <EditText
+                    android:id="@+id/etExperience"
+                    android:layout_width="38dp"
+                    android:layout_height="150dp"
+                    android:background="#c1eaeaea"
+                    android:ems="10"
+                    android:hint="@string/experience"
+                    android:inputType="text|textMultiLine" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/payInfo"
+                    android:textColor="#ffffff"
+                    android:textSize="26dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/etCardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/creditCard"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:id="@+id/etExprirationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/expiration"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:background="#c1eaeaea"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/loginJobSeeker"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:onClick="goJobSeekerMenu"
+        android:text="@string/register" />
+</RelativeLayout>
