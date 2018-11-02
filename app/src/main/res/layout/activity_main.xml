@@ -28,7 +28,7 @@
         android:textColor="#ffffff" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/login_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -40,11 +40,11 @@
         android:background="#c1eaeaea"/>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/login_field"
+        android:layout_alignStart="@+id/login_field"
         android:layout_marginStart="0dp"
         android:layout_marginTop="4dp"
         android:background="#c1eaeaea"
@@ -57,8 +57,8 @@
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/password_field"
+        android:layout_alignStart="@+id/login_field"
         android:layout_marginTop="-1dp"
         android:onClick="goJobSeekerMenu"
         android:text="@string/loginJobSeeker" />

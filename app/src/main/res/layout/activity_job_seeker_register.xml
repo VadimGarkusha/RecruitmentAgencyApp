@@ -66,7 +66,7 @@
                     android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/userName"
-                    android:inputType="textPersonName" />
+                    android:inputType="text|textPersonName" />
 
                 <EditText
                     android:id="@+id/etPassword"
@@ -75,7 +75,7 @@
                     android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/password"
-                    android:inputType="textPassword" />
+                    android:inputType="text|textPassword" />
             </TableRow>
 
             <TableRow>
@@ -87,7 +87,7 @@
                     android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/firstName"
-                    android:inputType="textPersonName" />
+                    android:inputType="text|textPersonName" />
 
                 <EditText
                     android:id="@+id/etLastName"
@@ -96,7 +96,7 @@
                     android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/lastName"
-                    android:inputType="textPersonName" />
+                    android:inputType="text|textPersonName" />
             </TableRow>
 
             <TableRow>
@@ -129,7 +129,7 @@
                     android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/postal"
-                    android:inputType="textPostalAddress" />
+                    android:inputType="text|textPostalAddress" />
             </TableRow>
 
             <TableRow>
@@ -171,22 +171,23 @@
                     android:id="@+id/etCardNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/creditCard"
-                    android:inputType="number"
-                    android:maxLength="16"
-                    android:background="#c1eaeaea"/>
+                    android:inputType="text|number"
+                    android:maxLength="16" />
             </TableRow>
             <TableRow>
+
                 <EditText
                     android:id="@+id/etExprirationDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#c1eaeaea"
                     android:ems="10"
                     android:hint="@string/expiration"
-                    android:inputType="number"
-                    android:maxLength="4"
-                    android:background="#c1eaeaea"/>
+                    android:inputType="text|number"
+                    android:maxLength="4" />
             </TableRow>
 
         </TableLayout>
@@ -200,6 +201,6 @@
         android:layout_below="@+id/sv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="9dp"
-        android:onClick="goJobSeekerMenu"
+        android:onClick="registerUser"
         android:text="@string/register" />
 </RelativeLayout>
