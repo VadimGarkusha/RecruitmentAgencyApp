@@ -3,6 +3,7 @@ package com.example.vadimgarkusha.vadym_victor_assignment4;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -38,7 +39,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS PAYMENT");
 
         String createCandidateTable = "CREATE TABLE CANDIDATE ( " +
-                "candidateID INTEGER NOT NULL UNIQUE, " +
+                "candidateId INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT , " +
                 "userName INTEGER NOT NULL UNIQUE, " +
                 "password TEXT NOT NULL, " +
                 "firstName TEXT NOT NULL, " +
@@ -47,8 +48,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "city TEXT DEFAULT 'N/A', " +
                 "postalCode TEXT DEFAULT 'N/A', " +
                 "qualification TEXT NOT NULL, " +
-                "experience TEXT NOT NULL, " +
-                "PRIMARY KEY(candidateID) );";
+                "experience TEXT NOT NULL );";
 
         String createAdminTable = "CREATE TABLE `ADMIN` ( " +
                 "`employeeId` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
@@ -58,13 +58,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "`lastName` TEXT NOT NULL )";
 
         String createJobOfferTable = "CREATE TABLE `JOB_OFFER` ( " +
+                "`employeeId` INTEGER NOT NULL, " +
+                "`candidateId` INTEGER NOT NULL, " +
                 "`interviewDate` DATE NOT NULL, " +
                 "`interviewStatus` TEXT NOT NULL, " +
                 "`companyName` TEXT NOT NULL, " +
                 "`positionName` TEXT NOT NULL, " +
                 "`recruitmentStatus` TEXT NOT NULL, " +
-                "FOREIGN KEY(`employeeId`) REFERENCES `ADMIN`(`employeeId`), " +
-                "FOREIGN KEY(`candidateId`) REFERENCES `CANDIDATE`(`candidateID`) )";
+                "PRIMARY KEY(employeeId, candidateId), " +
+                "FOREIGN KEY(employeeId) REFERENCES `ADMIN`(employeeId), " +
+                "FOREIGN KEY(candidateId) REFERENCES `CANDIDATE`(candidateId) )";
 
         String createPaymentTable = "CREATE TABLE `PAYMENT` ( " +
                 "`candidateId` INTEGER NOT NULL, " +
@@ -120,18 +123,22 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return ex != -1;
     }
 
-    public Cursor loginAsJobSeeker(String js, String ps) {
+    public int loginAsJobSeeker(String js, String ps) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("SELECT candidateId FROM CANDIDATE WHERE userName = ? AND password = ?", new String[]{ js, ps });
-        Log.i("RES CURSOR" ,res.toString());
-        return res;
+        res.moveToFirst();
+        int id = -1;
+        id = Integer.parseInt(res.getString(res.getColumnIndex("candidateId")));
+        return id;
     }
 
-    public Cursor loginAsAdmin(String js, String ps) {
+    public int loginAsAdmin(String js, String ps) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("SELECT employeeId FROM ADMIN WHERE userName = ? AND password = ?", new String[]{ js, ps });
-        Log.i("RES CURSOR" , res.toString());
-        return res;
+        res.moveToFirst();
+        int id = -1;
+        id = Integer.parseInt(res.getString(res.getColumnIndex("employeeId")));
+        return id;
     }
 
     public String[] getUserData(String id, boolean isAdmin) {

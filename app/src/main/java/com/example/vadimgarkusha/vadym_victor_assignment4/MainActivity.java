@@ -34,17 +34,11 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password_field);
         String loginText = login.getText().toString();
         String passwordText = password.getText().toString();
-        Cursor res = db.loginAsJobSeeker(loginText, passwordText);
-        Log.i("CURSOR", Integer.toString(res.getCount()));
-        Integer id = null;
-//        if (res.moveToFirst()) {
-//            id = res.getInt(res.getColumnIndex("candidateId"));
-//            Log.i("FDFSDFSDFSDF", Integer.toString(id));
-//        }
+        int id = db.loginAsJobSeeker(loginText, passwordText);
         intent = new Intent(this, JobSeekerMenuActivity.class);
         intent.putExtra("isAdmin", false);
-//        intent.putExtra("id", id);
-        if (res.getCount() == 0) {
+        intent.putExtra("id", id);
+        if (id == -1) {
             dialog.showMessage("Error!", "The login or password is invalid!");
         } else {
             dialog.showMessage("Success!", "You logged as a Job Seeker!");
@@ -62,15 +56,11 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password_field);
         String loginText = login.getText().toString();
         String passwordText = password.getText().toString();
-        Cursor res = db.loginAsJobSeeker(loginText, passwordText);
-        Integer id = null;
-        if (res.moveToFirst()) {
-            id = res.getInt(res.getColumnIndex("employeeId"));
-        }
+        int id = db.loginAsJobSeeker(loginText, passwordText);
         intent = new Intent(this, AdminMenuActivity.class);
         intent.putExtra("isAdmin", true);
         intent.putExtra("id", id);
-        if (res.getCount() == 0) {
+        if (id == -1) {
             dialog.showMessage("Error!", "The login or password is invalid!");
         } else {
             dialog.showMessage("Success!", "You logged in as Admin!");
